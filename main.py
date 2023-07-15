@@ -18,6 +18,9 @@ class Item:
     def apply_discount(self):
         self.price = self.price * self.pay_rate
 
+    def __repr__(self) -> str:
+        #Adding the representation of objects
+        return f"Item('{self.name}', {self.price}, {self.quantity})"
 
 item1 = Item("Phone", 600, 6)
 item2 = Item("Laptop", 2000, 3)
@@ -25,5 +28,4 @@ item3 = Item("Keyboard", 1500, 2)
 item4 = Item("Screen", 1400, 1)
 item5 = Item("Cable", 700, 2)
 
-for instance in Item.all:
-    print(f"{instance.name} Cost {instance.price} Rwf")
+print(Item.all)
